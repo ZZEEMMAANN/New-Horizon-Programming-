@@ -1,0 +1,20 @@
+import java.util.Scanner; // get Scanner from the java library
+ 
+public class Addition
+{
+    public static void main( String args[] ) // start of execution
+    {
+        Scanner input = new Scanner( System.in );  // create scanner       
+ 
+        System.out.print( "Enter first integer: " ); // prompt user to enter the first integer
+        int number1 = input.nextInt(); // read the first integer
+ 
+        System.out.print( "Enter second integer: " ); // prompt user to enter the second integer
+        int number2 = input.nextInt(); // read the second integer
+ 
+        int sum = number1 + number2; // add the two integers
+ 
+        System.out.println( "Sum is " + sum ); // print the sum to screen
+ 
+    } // end of execution
+}
