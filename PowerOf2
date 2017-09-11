@@ -1,0 +1,22 @@
+import java.util.Scanner; 
+
+public class PowerOf2
+{
+    public static void main( String args[] ) 
+    {
+        Scanner input = new Scanner( System.in );        
+
+        System.out.println ("Enter number 1:"); 
+        int number1 = input.nextInt();
+        int number2 = 2;
+        
+
+        while (number1 < 5000)
+        {
+            int sum = number1 * number2;
+            System.out.println ("The Next Power of 2 Is: " + sum);
+            
+            number1 = sum;
+        }
+    }
+}
