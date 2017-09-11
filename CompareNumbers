@@ -1,0 +1,26 @@
+import java.util.Scanner; // get Scanner from Java library
+ 
+public class CompareNumbers
+{
+    public static void main( String args[] ) // start of execution
+    {
+        Scanner input = new Scanner( System.in ); // create scanner
+        System.out.print( "Enter first integer: " ); // prompt user for the first integer
+        int number1 = input.nextInt(); // read the first integer
+        System.out.print( "Enter second integer: " ); // prompt user for the second integer
+        int number2 = input.nextInt(); //  read the second integer
+ 
+        if ( number1 == number2 )                            
+            System.out.println(number1 + " is equal to " + number2 );
+ 
+        if ( number1 != number2 )                           
+            System.out.println( number1 + " not equal to " + number2  );
+ 
+        if ( number1 < number2 )                           
+            System.out.println( number1 + " is less than " + number2 );
+ 
+        if ( number1 > number2 )                           
+            System.out.println( number1 + " is greater than " + number2  );
+ 
+    } // end of execution
+}
