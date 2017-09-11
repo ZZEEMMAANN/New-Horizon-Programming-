@@ -1,0 +1,22 @@
+import java.util.Scanner; // get Scanner from java library
+ 
+public class OddEven
+{
+    public static void main( String args[] ) // start of execution
+    {
+        Scanner input = new Scanner( System.in );  // create scanner       
+ 
+        System.out.println( "Enter number:" ); // prompt user to enter the integer
+        int number = input.nextInt(); // read the integer
+ 
+        if (number % 2 == 0) // if remainder when divided by 2 is 0
+        {
+            System.out.println (number + " is even");
+        }
+        if (number % 2 == 1)// if remainder when divided by 2 is 1
+        {
+            System.out.println (number + " is odd");
+        }
+ 
+    } // end of execution
+}
