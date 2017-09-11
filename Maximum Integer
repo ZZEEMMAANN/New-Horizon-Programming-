@@ -1,0 +1,33 @@
+
+/**
+ * Write a description of class MaxInt2 here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+import java.util.Scanner;
+public class MaxInt2
+{
+  public static void main( String args[] ) 
+  {
+    Scanner input = new Scanner( System.in );
+    
+      int large = - 10;
+      for ( int i = 1; i <= 5;i = i + 1 )
+      {
+          System.out.println("Input Number");
+          int num = input.nextInt();
+          
+          
+          
+          if(num > large)
+          
+          {
+            large= num;
+            
+            }
+      }
+      System.out.println(large+ " is the larget number ");
+  }   
+  
+}
