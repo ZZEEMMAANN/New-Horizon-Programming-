@@ -1,0 +1,31 @@
+
+/**
+ * Write a description of class TwentyOne here.
+ * add till number is over 21
+ * @author (Zavon
+ * @version (9/8/17)
+ */
+import java.util.Scanner; 
+public class TwentyOne
+{
+    public static void main( String args[] ) 
+  { 
+    Scanner input = new Scanner( System.in );
+    int sum = 0; 
+    System.out.println ("Enter number that is 1-5:");
+    int number1 = input.nextInt();
+    while (sum < 21)
+    {
+            
+            System.out.println ("Enter number that is 1-5:");
+            int number2 = input.nextInt();
+
+            sum = number1 + number2;
+            
+            System.out.println ( number1 + " plus " + number2 + " equals " +sum );
+            
+             number1 = sum ;
+    }    
+    System.out.println ( sum + " is over 21");
+  }
+}
