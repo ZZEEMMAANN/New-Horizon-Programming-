@@ -1,0 +1,39 @@
+import java.util.Scanner; 
+
+public class Fibonacci
+{
+    public static void main( String args[] ) 
+    {
+        Scanner input = new Scanner( System.in );        
+
+        System.out.println ("Enter number:"); 
+        int number1 = input.nextInt();
+        int number2 = 1;
+        int number3 = 0;
+
+        while (number3 < 1000)
+        {
+            int sum = number1 + number2;
+            System.out.println ("the fibonacci sequence is: " + sum);
+            
+            number1 = number2;
+            number3 = sum;
+            number2 = sum;
+            
+            
+            
+           
+
+             
+            
+             /*sum = number1 + number2;
+            System.out.println ("the fibonacci sequence is: " + sum);
+            
+            number1 = number2;
+             sum = number3;
+            number2 = sum;*/
+            
+        }    
+
+    }
+}
