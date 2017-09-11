@@ -1,0 +1,124 @@
+
+import java.util.Scanner;
+
+public class Prime
+{
+    public static void main( String args[] )
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the integer: ");
+        int number = input.nextInt();
+        int answer1 = 2;
+        int answer2 = 3;
+        int answer3 = 4;
+        int answer4 = 5;
+        int answer5 = 6;
+        int answer6 = 7;
+        int answer7 = 8;
+        int answer8 = 9;
+        int i = 0;
+        while(i == 0)
+        {
+            if (number % answer1 == 0)
+            {
+                System.out.println(number + " is composite");
+                
+                System.exit(0); //when the remainder equals 0 the program ends
+            }
+            
+            else
+            {
+             break; //if the remainder equals 1 the program breaks out of the while loop
+            }
+
+            if (number % answer2 == 0)
+            {
+                System.out.println(number + " is composite");
+                
+                System.exit(0);
+            }
+
+            else
+            {
+             break;
+            }
+            
+            if (number % answer3 == 0)
+            {
+                System.out.println(number + " is composite");
+                
+                System.exit(0);
+            }
+
+            else
+            {
+             break;
+            }
+            
+            if (number % answer4 == 0)
+            {
+                System.out.println(number + " is composite");
+                
+                System.exit(0);
+            }
+            
+            else
+            {
+             break;
+            }
+            
+            if (number % answer5 == 0)
+            {
+                System.out.println(number + " is composite");
+                
+                System.exit(0);
+            }
+
+            else
+            {
+             break;
+            }
+            
+            if (number % answer6 == 0)
+            {
+                System.out.println(number + " is composite");
+                
+                System.exit(0);
+            }
+            
+            else
+            {
+             break;
+            }
+            
+            if (number % answer7 == 0)
+            {
+                System.out.println(number + " is composite");
+                
+                System.exit(0);
+            }
+
+            else
+            {
+             break;
+            }
+            
+            if (number % answer8 == 0)
+            {
+                System.out.println(number + " is composite");
+                
+                System.exit(0);
+            }
+            
+            else
+            {
+             break;
+            }
+            
+        }
+         
+         System.out.println(number + " is prime");
+    
+            
+        }
+}
