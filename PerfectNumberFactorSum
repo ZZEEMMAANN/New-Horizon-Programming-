@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class PerfectNumberFactorSum
+{
+    public static void main( String args[] )
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println( "Enter one integer: " ); 
+        int integer1 = input.nextInt();
+        
+        int sum = 0;
+        
+        int X = 1;
+        for ( int i = 1; i <= 10;i = i + 1 ) 
+        
+            if (integer1 % X == 0)
+            {
+             sum = integer1 / X;
+             X = X + 1;
+            
+             sum = sum + sum;   
+         
+            }
+            if (sum  == integer1 )
+            {
+                System.out.println(sum + " is a perfect number ");
+            }
+            else
+            {
+                System.out.println(integer1 + " is not a perfect number ");
+            }
+                      
+        
+        
+    }
+    
+}
