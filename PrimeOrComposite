@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Prime2
+{
+    public static void main( String args[] )
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println( "Enter one integer: " ); 
+        int integer1 = input.nextInt();
+
+        int sum = 0;
+        int  prime = 0;
+        int X = 1;
+        for ( int i = 1; i <= integer1;i = i + 1 ) 
+        {   System.out.println(integer1 + " % " + i);
+            sum = integer1 % i;
+            System.out.println(sum);
+            if (sum == 0)
+            {
+                prime = prime + 1;
+
+            }
+        }
+
+        if (prime == 2)
+        {
+            System.out.println("prime ");
+
+        }
+        else
+
+            System.out.println("Composite");
+
+    }
+
+}
