@@ -7,19 +7,20 @@ public class MexicoUSAPopulation
         Scanner input = new Scanner(System.in);
         System.out.println("Mexicos population is 58,000,000 in the year 1994");
         System.out.println("Americas population is 260,000,000 in the year 1994");
-        int america = 260000000;
-        int mexico = 58000000;
+      
         int year = 0;
-        int mexpopulation = 0;
-        int amepopultion = 0;
-        while (mexpopulation < amepopultion)
+ 
+
+        double mexpopulation = 58, amepopulation = 260;
+        //while(mexpopulation <= amepopulation)
+        //for(int mexpopulation = 0;  amepopulation = 0; mexpopulation < amepopultion)
+        while (year++ < 32)
         {
-            double mexpopulation = mexico * 0.07;
-            double amepopultion = america * 0.02;
-            amepopultion = amepopultion + america;
-            mexpopulation = mexpopulation + mexico;
-            System.out.println("Americas population has gone up to " + amepopultion + " In year " + ++year );
-            System.out.println("Mexico population has gone up to " + mexpopulation + " In year " + ++year );
+            mexpopulation *= 1.07;
+            amepopulation *=  1.02;
+
+            System.out.println("Americas population has gone up to " + amepopulation + " In year " + year );
+            System.out.println("Mexico population has gone up to " + mexpopulation + " In year " + year );
         }
     }
 
