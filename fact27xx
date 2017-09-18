@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class fact27xx
+{
+    public static void main( String args[] )
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println( "Enter number: " ); 
+        int integer1 = input.nextInt();
+        //int sum2 = 1;
+        int sum = 2;
+        int i = 2;
+        //int sum3 = 0;
+        //while(integer1++ < 7) 
+        
+        {
+            while (i++ <= integer1) 
+            //if (integer1  <=7)
+            {
+                
+                sum = sum *i;
+                sum2 = sum
+                
+                
+                
+                 System.out.println(sum);  
+
+            }
+            //System.out.println(sum3);
+            
+            
+
+        }
+    }
+
+}
