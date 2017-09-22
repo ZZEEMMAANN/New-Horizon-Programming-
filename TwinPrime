@@ -1,63 +1,60 @@
 import java.util.Scanner;
 
-public class TwinPrime
+public class TwinPrime2
 {
     public static void main( String args[] )
     {
         Scanner input = new Scanner(System.in);
         System.out.println( "Enter one integer: " ); 
         int integer1 = input.nextInt();
+        int integer2 = 0;
         int sum1=0;
         int sum = 0;
         int  prime = 0;
-        int X = 1;
+        int x = 1;
         int sum2 =0;
         int sum3 =0;
         int  prime2 = 0;        
-        for(int x = 1; x <200; ++x  )
+        for (x < 200;integer1 += 1;x=x+1)
         {
-           // integer1 += 1;
-              for ( int i = 1; i <= integer1;i = i + 1)  
-        
-            {   //System.out.println(integer1 + " % " + i);
-             sum = integer1 % i;
-             sum1 = integer1 / i;
-             //System.out.println(sum);
-             //System.out.println(sum1);
-             if (sum == 0)
-             {
-                prime = prime + 1;
 
-                  //System.out.println(integer1);
-             }
-           }
-           int integer2 = integer1 + 2;
-           
-           
-           if (prime == 2)
-           {
-             for ( int v = 1; v <= integer2;v = v + 1)  
-              {
-               sum2 = integer1 % v;
-               sum3 = integer1 / v;
-               if (sum2 == 0)
-               {
-                   prime2 = prime2 + 1;
-                 // integer1 += 1;
-                }             
-                 }
-
-           }
-            if (prime2 == 2)
-            {
             
-                  System.out.println(integer2);
-                 System.out.println(integer1);
-                 System.out.println("yes");
-                 integer1 += 1;                 
-                }
-           
-       }
-    }
+            for ( int i = 1; i <= integer1;i = i + 1)  
+            {   //System.out.println(integer1 + " % " + i);
+                sum = integer1 % i;
+                sum1 = integer1 / i;
+                //System.out.println(sum);
+                //System.out.println(sum1);
+                if (sum == 0)
+                {
+                    prime = prime + 1;
 
+                }
+            }
+
+            if (prime == 2)
+            {
+                integer2 = integer1 + 2;
+                for ( int i = 1; i <= integer2;i = i + 1)  
+                {   //System.out.println(integer2 + " % " + i);
+                    sum = integer1 % i;
+                    sum1 = integer1 / i;
+                    //System.out.println(sum);
+                    //System.out.println(sum1);
+                    if (sum == 0)
+                    {
+                        prime = prime + 1;
+
+                    }
+                }           
+
+            }
+
+            if(prime ==4)
+            {
+                System.out.println(integer1);
+                System.out.println(integer2);        
+            }
+        }
+    }
 }
