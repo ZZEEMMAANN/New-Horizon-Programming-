@@ -1,0 +1,45 @@
+import java.util.Random;//(before public class)
+import java.util.Scanner;
+public class craps 
+{
+    private static Scanner scan;
+    public static void main( String args[] )
+    {
+        scan = new Scanner(System.in);
+        int i = 0;
+        int x = 0;
+        int dice = r.nextInt(6) + 1;
+        int dice2 = r.nextInt(6) + 1;//(inside main, after you have created r)
+        int v = 0;
+        int sum= 0;
+        int array[] = new int[5];
+        while(x<5)
+        {
+            //(inside main)
+            //int dice = r.nextInt(6) + 1;
+            //int dice2 = q.nextInt(6) + 1;//(inside main, after you have created r) 
+            array[i] = scan.nextInt();
+            Random r = new Random();
+            array[v] = scan.nextInt();
+            Random q = new Random();
+            System.out.println(array[i]+"+"+array[v]);
+            array[sum] = array[i]+array[v];
+            System.out.println(array[sum]);
+            x++;
+            //if (7 < array[sum] > 11)
+            {
+            
+            }
+        }
+        while ( x < 36) 
+        {
+            System.out.println("Enter number: ");
+            array[i] = scan.nextInt();
+            System.out.println("Enter number: ");
+            array[v] = scan.nextInt();            
+            array[sum] = array[v] + array[i];
+            System.out.println(array[sum]);
+            x++;
+        }        
+    }
+}
