@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class arraytest
+{
+    private static Scanner scan;
+
+    public static void main(String args[]) {
+        scan = new Scanner(System.in);
+        int array[] = new int[5];
+
+        int sum = 0;
+
+        int x = 0;
+        int i = 0;
+        while ( x < 10) 
+        {
+            System.out.println("Enter number: ");
+            array[i] = scan.nextInt();
+            sum = sum + array[i];
+            System.out.println(sum);
+            x++;
+        }
+    }
+}
