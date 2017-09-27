@@ -1,0 +1,48 @@
+public class Problem1
+{
+    public static void main( String args[] )
+    {
+        Scanner input = new Scanner(System.in);
+        //System.out.println( "Enter one integer: " ); 
+        //int integer1 = input.nextInt();
+        int sum1=0;
+        int sum = 0;
+        int  prime = 0;
+        int X = 1;
+        int v = 0;
+        int sum2=0;
+        while(v<3)
+        
+        {
+
+            System.out.println( "Enter one integer: " ); 
+            int integer1 = input.nextInt();            
+            for ( int i = 1; i <= integer1;i = i + 1)  
+            {   //System.out.println(integer1 + " % " + i);
+                sum = integer1 % i;
+                sum1 = integer1 / i;
+                //System.out.println(sum);
+                //System.out.println(sum1);
+                if (sum == 0)
+                {
+                    prime = prime + 1;
+
+                }
+            }
+
+            if (prime == 2)
+            {
+                System.out.println( integer1 + " prime ");
+                sum2 = sum2+integer1;
+                System.out.println(" sum of prime digits "+ integer1+" = "+sum2);
+                prime=0;
+            }
+            else
+             {
+                System.out.println(integer1+" Composite ");
+                System.out.println(" sum of prime digits "+ integer1+" = "+sum2);
+             }
+                v++;
+        }
+    }
+}
