@@ -13,12 +13,14 @@ public class Problem2
             int integer1 = input.nextInt();
             int sum= 0;
             int sum2 =0;
+            int sum3=0;
             for ( int i = 1; i <= integer1;i = i + 1)
             {
              sum = integer1 % i;
-             if (sum = 0)
+             sum3 = integer1 / i;
+             if (sum == 0)
              {
-               sum2= sum + sum2;  
+               sum2= i + sum2;  
                System.out.println(" Sum of all the factors of "+ integer1+" is "+sum2);  
              }
             }
