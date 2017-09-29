@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class SecondLargest
+{
+    private static Scanner scan;
+
+    public static void main(String args[]) 
+    {
+        scan = new Scanner(System.in);
+        int array1[] = new int[6];
+        int x=0;
+        int max=-10,max2=-10;
+        for (int i = 0; i < array1.length; ++i) 
+        {
+            System.out.println("Enter number: ");
+            array1[i] = scan.nextInt();
+          
+            if (array1[x]> max) 
+            {
+                
+                max2=max;
+                max=array1[x];
+               
+            }
+            else if (array1[x]<max2)
+            {
+                max2=array1[x];
+
+            }
+          
+        }
+         System.out.println( max2 + " is the second largest ");
+    }
+}
