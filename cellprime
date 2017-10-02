@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class cell
+{
+	
+	public static boolean check_If_Prime(int p)
+    {
+        int i = 2;
+        boolean m = true;
+
+        if(p == 1 || p == 0)
+        {
+            return false;
+        }
+        else
+        {
+            while (i <= Math.sqrt(p) && m==true)
+            {
+                if (p % i == 0)
+                {
+                    m = false;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+
+            if (m == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
+    public static void main( String args[] ) // start of execution
+    {
+        Scanner scan = new Scanner(System.in);
+        
+       
+        int array[] = new int[7];
+        
+        int z = 0;
+        
+        int sum = 0;
+        
+        
+        int digit = 0;
+       // Scanner m = new Scanner (System.in);
+        //z = m.nextInt(); 
+        for (int d = 0; d < array.length; ++d) 
+        {
+           array[d] = scan.nextInt();
+
+            if (check_If_Prime(array[d]))
+            {
+            	digit = array[d];
+               if (array[d] < digit) ;
+               {
+               sum= digit;
+               z = d;
+               }
+            }  
+         
+
+
+        }
+        if (check_If_Prime(sum))
+        {
+        System.out.println("the largest prime is " + sum);
+        
+        System.out.println("it is contained in cell #" + z);
+        }
+        else
+        {
+        	System.out.println("no prime numbers in the array");
+        }
+        }
+        
+        
+    }
