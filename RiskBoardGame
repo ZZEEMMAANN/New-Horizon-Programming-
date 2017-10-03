@@ -1,0 +1,46 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class RiskBoardGame
+{
+    int arrayWorldMap[] = new int[7];
+    
+    int arrayNAmerica[] = new int[9];
+    int arraySAmerica[] = new int[4];
+    int arrayEurope[] = new int[7];
+    int arrayAfrica[] = new int[6];
+    int arrayAsia[] = new int[12];
+    int arrayAustralia[] = new int[4];
+    int Board = 42;
+    
+    
+    
+    int red = 14;   //red is 1
+    int green=14;   //green is 2
+    int blue= 14;   // blue is 3
+    public RiskBoardGame()
+    {
+      while (Board != 0)
+      {
+          
+          Board--;
+      }
+        
+    }
+    public static int Roll()
+    {
+        Random randomGenerator = new Random();
+        int Dice = randomGenerator.nextInt(6) + 1;
+        //System.out.println("\n dice1 = " + dice1 + " dice2 = " + dice2);
+        return Dice ;
+        
+    }    
+        public static int PlayerRoll()
+    {
+        Random randomGenerator = new Random();
+        int Player = randomGenerator.nextInt(3) + 1;
+        //System.out.println("\n dice1 = " + dice1 + " dice2 = " + dice2);
+        return Player ;
+        
+    }
+}
