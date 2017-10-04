@@ -12,6 +12,53 @@ public class RiskBoardGame
     int arrayAsia[] = new int[12];
     int arrayAustralia[] = new int[4];
     int Board = 42;
+    int Greenland=0;
+    int Alaska=0;
+    int Alberta=0;
+    int CentralAmerica=0;
+    int EasternUnitedStates=0;
+    int NorthwestTerritory=0;
+    int Ontario=0;
+    int Quebec=0;
+    int WesternUnitedStates=0;
+    int Argentina=0;
+    int Brazil=0;
+    int Peru=0;
+    int Venezuela=0;
+    int GreatBritain=0;
+    int Iceland=0;
+    int NorthernEurope=0;
+    int Scandinavia=0;
+    int SouthernEurope=0;
+    int Ukraine=0;
+    int WesternEurope=0;
+    int Congo=0;
+    int EastAfrica=0;
+    int Egypt=0;
+    int Madagascar=0;
+    int NorthAfrica=0;
+    int SouthAfrica=0;
+    int Afghanistan=0;
+    int China=0;
+    int India=0;
+    int Irkutsk=0;
+    int Japan=0;
+    int Kamchatka=0;
+    int MiddleEast=0;
+    int Mongolia=0;
+    int Siam=0;
+    int Siberia=0;
+    int Ural=0;
+    int Yakutsk=0;
+    int EasternAustralia=0;
+    int Indonesia=0;
+    int NewGuinea=0;
+    int WesternAustralia=0;
+    
+    
+    
+    
+    
     
     
     
