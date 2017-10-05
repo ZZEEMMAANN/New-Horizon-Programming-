@@ -1,5 +1,19 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.Timer;
 
 public class RiskBoardGame
 {
@@ -61,20 +75,69 @@ public class RiskBoardGame
     
     
     
-    
+    public void loadImages() {
+
+        ImageIcon iid = new ImageIcon("C:\\1000px-Risk_game_map_fixed (1).png");
+         menuBg = iid.getImage();
+          board = iid.getImage();
+
+    }
     int red = 14;   //red is 1
     int green=14;   //green is 2
     int blue= 14;   // blue is 3
     public RiskBoardGame()
     {
-      while (Board != 0)
-      {
+      //while (Board != 0)
+      {     
+          /*int Greenland=0;
+          int Alaska=0;
+          int Alberta=0;
+          int CentralAmerica=0;
+          int EasternUnitedStates=0;
+          int NorthwestTerritory=0;
+          int Ontario=0;
+          int Quebec=0;
+          int WesternUnitedStates=0;
+          int Argentina=0;
+          int Brazil=0;
+          int Peru=0;
+          int Venezuela=0;
+          int GreatBritain=0;
+          int Iceland=0;
+          int NorthernEurope=0;
+          int Scandinavia=0;
+          int SouthernEurope=0;
+          int Ukraine=0;
+          int WesternEurope=0;
+          int Congo=0;
+          int EastAfrica=0;
+          int Egypt=0;
+          int Madagascar=0;
+          int NorthAfrica=0;
+          int SouthAfrica=0;
+          int Afghanistan=0;
+          int China=0;
+          int India=0;
+          int Irkutsk=0;
+          int Japan=0;
+          int Kamchatka=0;
+          int MiddleEast=0;
+          int Mongolia=0;
+          int Siam=0;
+          int Siberia=0;
+          int Ural=0;
+          int Yakutsk=0;
+          int EasternAustralia=0;
+          int Indonesia=0;
+          int NewGuinea=0; */
+          int WesternAustralia = PlayerRoll();
+          System.out.println(WesternAustralia);
           
           Board--;
       }
         
     }
-    public static int Roll()
+        public static int Roll()
     {
         Random randomGenerator = new Random();
         int Dice = randomGenerator.nextInt(6) + 1;
