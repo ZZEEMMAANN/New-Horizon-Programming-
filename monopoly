@@ -1,0 +1,87 @@
+import java.util.Random;
+import java.util.Scanner;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+public class monopoly
+
+{
+    // instance variables - replace the example below with your own
+    private int x;
+    int Go=0;
+    int Med=1;
+    int Baitic=2;
+    int IncomeTax=3;
+    int Railroad1=4;
+    int OrientalAve=5;
+    int Vermont=6;
+    int Connecticut=7;
+    int JailVisit=8;
+    int StCharlesPlace=9;
+    int EletricCompany=10;
+    int StatesAve=11;
+    int Virginia=12;
+    int Railroad2=13;
+    int StJamesPlace=14;
+    int Chest=15;
+    int TennesseAve=16;
+    int NewYorkAve=17;
+    int FreeParking=18;
+    int KentuckyAve=19;
+    int Chance=20;
+    int IndianaAve=21;
+    int IllinosAve=22;
+    int Railroad3=23;
+    int AtlanticAve=24;
+    int Ventnor=25;
+    int Waterworks=26;
+    int GoToJail=27;
+    int PacificAve=28;
+    int Northcarolina=29;
+    int Chest2=30;
+    int Pennsylvania=31;
+    int Railroad4 = 32;
+    int Chaance2 = 33;
+    int ParkPlace = 34;
+    int LuxuryTax=35;
+    int Boardwalk= 36;
+    
+    public monopoly()
+    {
+        while(x<0)
+        {
+         
+            
+            
+        }
+
+    }
+            public static int Roll()
+    {
+        Random randomGenerator = new Random();
+        int Dice = randomGenerator.nextInt(6) + 1;
+        //System.out.println("\n dice1 = " + dice1 + " dice2 = " + dice2);
+        return Dice ;
+        
+    }    
+        public static int PlayerRoll()
+    {
+        Random randomGenerator = new Random();
+        int Player = randomGenerator.nextInt(3) + 1;
+        //System.out.println("\n dice1 = " + dice1 + " dice2 = " + dice2);
+        return Player ;
+        
+    
+    }
+}
