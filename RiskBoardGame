@@ -116,20 +116,20 @@ public class RiskBoardGame
           int NorthAfrica=0;
           int SouthAfrica=0;
           int Afghanistan=0;
-          int China=0;
-          int India=0;
-          int Irkutsk=0;
-          int Japan=0;
-          int Kamchatka=0;
-          int MiddleEast=0;
-          int Mongolia=0;
-          int Siam=0;
-          int Siberia=0;
-          int Ural=0;
-          int Yakutsk=0;
-          int EasternAustralia=0;
-          int Indonesia=0;
-          int NewGuinea=0; */
+          int China = PlayerRoll();
+          int India = PlayerRoll();
+          int Irkutsk = PlayerRoll();
+          int Japan = PlayerRoll();
+          int Kamchatka = PlayerRoll();
+          int MiddleEast = PlayerRoll();
+          int Mongolia = PlayerRoll();
+          int Siam = PlayerRoll();
+          int Siberia = PlayerRoll();
+          int Ural = PlayerRoll();
+          int Yakutsk = PlayerRoll();
+          int EasternAustralia = PlayerRoll();
+          int Indonesia= PlayerRoll();
+          int NewGuinea= PlayerRoll(); */
           int WesternAustralia = PlayerRoll();
           System.out.println(WesternAustralia);
           
