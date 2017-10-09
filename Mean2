@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class mean2 
+{
+    private static Scanner scan;
+
+    public static void main(String args[]) 
+    {
+        scan = new Scanner(System.in);
+        int array[] = new int[6];
+        double average;
+        int sum = 0;
+        int j;
+        for (int i = 0; i < array.length; ++i) {
+            System.out.println("Enter number: ");
+            array[i] = scan.nextInt();
+            sum = sum + array[i];
+        }
+        average = sum / 5;
+        System.out.println("The average is " + average);
+        for (j = 0; j < array.length; ++j) {
+            if (array[j] > average) {
+                System.out.println(array[j] + " is greater than the average");
+            } else {
+                System.out.println(array[j] + " is less than the average");
+            }
+        }
+    }
+}
+
