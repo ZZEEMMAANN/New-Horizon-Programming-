@@ -56,11 +56,19 @@ public class monopoly
     int ParkPlace = 34;
     int LuxuryTax=35;
     int Boardwalk= 36;
+    int player2=1500;
+    int player1=1500;
+    int turnselection=0;
+    int arrayplayer1[] = new int[3];
+    int arrayplayer2[] = new int [3];
     
     public monopoly()
     {
-        while(x<0)
+        while(player1 >0 ||player2 > 0 )
         {
+            System.out.println("roll to see who goes first");
+            System.out.println("Player1 Rolls first to see who rolls first");
+            System.out.println("P");            
          
             
             
@@ -84,4 +92,25 @@ public class monopoly
         
     
     }
-}
+                public int Turn()
+    {   
+        if (turnselection < 1)
+        {
+         Random randomGenerator = new Random();
+         int Player = randomGenerator.nextInt(3) + 1;
+         //System.out.println("\n dice1 = " + dice1 + " dice2 = " + dice2);
+         System.out.println("roll to see who goes first");
+         System.out.println("Player1 Rolls first to see who rolls first");
+         System.out.println("Player1 Roll");         
+         
+        int arrayplayer1[3] = randomGenerator.nextInt(6) + 1;
+         System.out.println("P");
+          return Player ;
+         }
+        
+    
+        return Player ;
+     }
+       //  int arrayplayer1[] = new int[3];
+    //int arrayplayer2[] = new int [3];
+    }
