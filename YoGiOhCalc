@@ -1,0 +1,74 @@
+import java.util.Scanner; 
+
+public class YoGiOhCalc
+{
+    public static void main( String args[] ) 
+    {
+        Scanner input = new Scanner( System.in );
+        
+
+        System.out.println ("Enter number:"); 
+        int attack = 0;//input.nextInt();
+        int def = 0;
+        int player1=0;
+        int player2=0;
+        int sum=0;
+        int t=0;
+        System.out.println("enter player1 Life Points");
+        player1 = input.nextInt();
+        System.out.println("enter player1 Life Points");
+        player2 = input.nextInt();
+
+         while(player1 > 0 ||player2 > 0 )
+        {
+            System.out.println("If Its player1 attack turn press 1 If Its Player 2 attacking turn press 2");
+            t = input.nextInt();
+
+            if(t<2)
+            {
+             System.out.println ("Enter Player1.1 Attack monster Attack points");
+             attack= input.nextInt();
+             System.out.println ("Enter Player2.1 Attack monster Attack points");
+             def = input.nextInt();
+             sum = attack-def; 
+             if (attack > def )
+             {
+              player2 =player2 - sum;  
+             }
+             else 
+             {
+             player1=player1 - sum;     
+             }
+              System.out.println ("Player1 LP is "+ player1);
+               System.out.println ("Player2 LP is "+ player2);
+            }
+            
+            if(t>1)
+            {
+             System.out.println ("Enter Player1.2 Attack monster Attack points");
+             attack= input.nextInt();
+             System.out.println ("Enter Player2.2 Attack monster Attack points");
+             def = input.nextInt();
+             sum = attack-def; 
+             if (attack > def )
+             {
+              player1 =player1- sum;  
+             }
+             else 
+             {
+             player2= player2 - sum;     
+             }
+             System.out.println ("Player1 LP is "+ player1);
+             System.out.println ("Player2 LP is "+ player2);
+            }            
+            /*
+                        System.out.println ("Enter Attack monster Attack points");
+            attack= input.nextInt();
+            System.out.println ("Enter Attack monster Attack points");
+            def = input.nextInt();
+            sum = attack-def;
+            */
+        }    
+
+    }
+}
