@@ -1,11 +1,11 @@
 import java.util.Scanner; 
+import java.util.Random;
 
 public class YoGiOhCalc
 {
     public static void main( String args[] ) 
     {
         Scanner input = new Scanner( System.in );
-        
 
         System.out.println ("Enter number:"); 
         int attack = 0;//input.nextInt();
@@ -14,61 +14,143 @@ public class YoGiOhCalc
         int player2=0;
         int sum=0;
         int t=0;
+        int r=0;
+        int p=1;
         System.out.println("enter player1 Life Points");
         player1 = input.nextInt();
         System.out.println("enter player1 Life Points");
         player2 = input.nextInt();
+        System.out.println("roll to see who goes first");
+        Roll();
+        System.out.println("roll to see who goes first");
+        Roll();
 
-         while(player1 > 0 ||player2 > 0 )
+        while(player1 > 0 ||player2 > 0 )
         {
             System.out.println("If Its player1 attack turn press 1 If Its Player 2 attacking turn press 2");
             t = input.nextInt();
 
+            while( p==1)
+            {
+                //Scanner input = new Scanner( System.in );
+                System.out.println("Do you wish to flip 1 = yes 2 = no");
+                r = input.nextInt();
+                if (r==1)
+                {
+                    Roll();
+                    //return coin ;
+                }
+                if (r==2) 
+                {
+
+                    break;
+                } 
+            }
+            // Start of Players1 turn
             if(t<2)
             {
-             System.out.println ("Enter Player1.1 Attack monster Attack points");
-             attack= input.nextInt();
-             System.out.println ("Enter Player2.1 Attack monster Attack points");
-             def = input.nextInt();
-             sum = attack-def; 
-             if (attack > def )
-             {
-              player2 =player2 - sum;  
-             }
-             else 
-             {
-             player1=player1 - sum;     
-             }
-              System.out.println ("Player1 LP is "+ player1);
-               System.out.println ("Player2 LP is "+ player2);
+                System.out.println ("Enter Player1.1 Attack monster Attack points");
+                attack= input.nextInt();
+                System.out.println ("Enter Player2.1 Attack monster Attack points");
+                def = input.nextInt();
+                //sum = attack-def; 
+                if (attack > def )
+                {
+                    sum = attack-def;   
+                    player2 = player2 - sum;  
+                }
+                else
+                {
+                    sum = def-attack;
+                    player1 = player1 - sum;     
+                }
+                System.out.println ("Player1 LP is " + player1);
+                System.out.println ("Player2 LP is " + player2);
             }
-            
+            //start of plaer 2 turn
             if(t>1)
             {
-             System.out.println ("Enter Player1.2 Attack monster Attack points");
-             attack= input.nextInt();
-             System.out.println ("Enter Player2.2 Attack monster Attack points");
-             def = input.nextInt();
-             sum = attack-def; 
-             if (attack > def )
-             {
-              player1 =player1- sum;  
-             }
-             else 
-             {
-             player2= player2 - sum;     
-             }
-             System.out.println ("Player1 LP is "+ player1);
-             System.out.println ("Player2 LP is "+ player2);
+                System.out.println ("Enter Player1.2 Attack monster Attack points");
+                attack= input.nextInt();
+                System.out.println ("Enter Player2.2 Attack monster Attack points");
+                def = input.nextInt();
+                //sum = attack-def; 
+                if (attack > def )
+                {
+                    sum = attack-def;   
+                    player1 = player1- sum;  
+                }
+                else 
+                {
+                    sum = def-attack;    
+                    player2 = player2 - sum;     
+                }
+                System.out.println ("Player1 LP is " + player1);
+                System.out.println ("Player2 LP is " + player2);
             }            
             /*
-                        System.out.println ("Enter Attack monster Attack points");
+            System.out.println ("Enter Attack monster Attack points");
             attack= input.nextInt();
             System.out.println ("Enter Attack monster Attack points");
             def = input.nextInt();
             sum = attack-def;
-            */
+             */
         }    
 
+    }
+
+    public static int Roll()
+    {
+        int r=0;
+        while( r == 0)
+        {
+
+            Scanner input = new Scanner( System.in );
+            System.out.println("Do you wish to roll 1 = yes 2 = no");
+
+            r = input.nextInt();
+            if (r<2)
+            {
+                Random randomGenerator = new Random();
+                int Dice = randomGenerator.nextInt(6) + 1;
+                System.out.println("the Dice landed on: " + Dice);
+                return Dice ;
+            }
+            if (r>1) 
+            {
+                r=0;
+            }
+        }
+        Random randomGenerator = new Random();
+        int Dice = randomGenerator.nextInt(6) + 1;
+        return Dice;
+    }
+
+    public static int Coin()
+    {
+        int r=0;
+        int p=1;
+        //int coin =0;
+        while( p==1)
+        {
+            Scanner input = new Scanner( System.in );
+            System.out.println("Do you wish to flip 1 = yes 2 = no");
+            r = input.nextInt();
+            if (r==1)
+            {
+                Random randomGenerator = new Random();
+                int coin = randomGenerator.nextInt(6) + 1;
+                System.out.println("the Coin landed on: " + coin);
+                return coin ;
+            }
+            if (r==2) 
+            {
+                p=p-1;
+                break;
+            } 
+        }
+        Random randomGenerator = new Random();
+        int coin = randomGenerator.nextInt(2) + 1;
+        return coin;
     }
 }
