@@ -18,7 +18,7 @@ public class YoGiOhCalc
         int p=1;
         System.out.println("enter player1 Life Points");
         player1 = input.nextInt();
-        System.out.println("enter player1 Life Points");
+        System.out.println("enter player2 Life Points");
         player2 = input.nextInt();
         System.out.println("roll to see who goes first");
         Roll();
@@ -29,11 +29,10 @@ public class YoGiOhCalc
         {
             System.out.println("If Its player1 attack turn press 1 If Its Player 2 attacking turn press 2");
             t = input.nextInt();
-
             while( p==1)
             {
                 //Scanner input = new Scanner( System.in );
-                System.out.println("Do you wish to flip 1 = yes 2 = no");
+                System.out.println("Do you wish to roll 1 = yes 2 = no");
                 r = input.nextInt();
                 if (r==1)
                 {
@@ -46,12 +45,29 @@ public class YoGiOhCalc
                     break;
                 } 
             }
+
+            while( p==1)
+            {
+                //Scanner input = new Scanner( System.in );
+                System.out.println("Do you wish to flip 1 = yes 2 = no");
+                r = input.nextInt();
+                if (r==1)
+                {
+                    Coin();
+                    //return coin ;
+                }
+                if (r==2) 
+                {
+
+                    break;
+                } 
+            }
             // Start of Players1 turn
             if(t<2)
             {
-                System.out.println ("Enter Player1.1 Attack monster Attack points");
+                System.out.println ("Enter Player1 Attack monster Attack points");
                 attack= input.nextInt();
-                System.out.println ("Enter Player2.1 Attack monster Attack points");
+                System.out.println ("Enter Player2 Attack monster Attack points");
                 def = input.nextInt();
                 //sum = attack-def; 
                 if (attack > def )
@@ -70,9 +86,9 @@ public class YoGiOhCalc
             //start of plaer 2 turn
             if(t>1)
             {
-                System.out.println ("Enter Player1.2 Attack monster Attack points");
+                System.out.println ("Enter Player 2 Attack monster Attack points");
                 attack= input.nextInt();
-                System.out.println ("Enter Player2.2 Attack monster Attack points");
+                System.out.println ("Enter Player 1 Attack monster Attack points");
                 def = input.nextInt();
                 //sum = attack-def; 
                 if (attack > def )
@@ -138,7 +154,7 @@ public class YoGiOhCalc
             r = input.nextInt();
             if (r==1)
             {
-                Random randomGenerator = new Random();
+              /*  Random randomGenerator = new Random();
                 int coin = randomGenerator.nextInt(6) + 1;
                 System.out.println("the Coin landed on: " + coin);
                 return coin ;
@@ -146,7 +162,7 @@ public class YoGiOhCalc
             if (r==2) 
             {
                 p=p-1;
-                break;
+                break;*/
             } 
         }
         Random randomGenerator = new Random();
