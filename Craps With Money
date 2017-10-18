@@ -1,0 +1,105 @@
+import java.util.Random;
+import java.util.Scanner; 
+
+public class craps4
+{
+    public static void main (String args[]) throws java.lang.Exception
+    {
+        Scanner input = new Scanner(System.in);
+        int win = 0;
+        int loss = 0;
+        int dice1 = 0;
+        int dice2 = 0;
+        int count =0;
+        int r=0;
+        int c =0;
+        System.out.println ("Enter money amount");
+        count = input.nextInt();
+        //c = input.nextInt();
+        //count= count-1;
+        //count=count +1;
+        //System.out.println("your curren funds are: " + count );
+        //c= count*2;
+        int x= count *2;
+        while (count  > 1|| count < x)
+        //for(int x = count * 2 ; count  < x; )
+        //while (count  > 1|| x ==! c)
+        
+        {
+            //for(int i = 0; i < count; i++)
+            // {
+            System.out.println("Roll the dice.");
+            int score = Roll();
+            System.out.println( "\n score" + score);
+
+            if (score == 11 || score == 7)
+            {
+                //System.out.println( "\n Score = " + score);
+                //System.out.println( "You win.");
+                win = win + 1;
+                count=count +1;
+                System.out.println("your curren funds are: " + count );
+                
+            }
+            else if (score == 2 || score == 3 || score == 12)
+            {
+                //System.out.println( "\n Score = " + score);
+                //System.out.println("You lose.");
+                loss = loss + 1;
+                count= count-1;
+                System.out.println("your curren funds are: " + count );
+               
+            }
+            else 
+            {
+                int point = score;
+                //System.out.println ("\n Point = " + point);
+
+                while (true)
+                {
+                    score = Roll();
+                    //System.out.println ("\n Score new = " + score);
+                    if (score == point)
+                    {
+                        //System.out.println ("\n You win.");
+                        win = win + 1;
+                        count= count+1;
+                        System.out.println("your curren funds are: " + count );
+                        break;
+                    }
+                    if (score == 7)
+                    {
+                        //System.out.println("\n you lose");
+                        loss = loss + 1;
+                        count= count -1;
+                        System.out.println("your curren funds are: " + count );
+                        break;
+                    }
+                    
+                }
+            }
+            //count++;
+            //break;
+            //}
+            if (count < 1)
+            {
+            break;
+            }
+            if (count > count*2)
+            {
+            break;
+            }
+        }
+        System.out.println("\n number of wins = " + win + " \n number of losses = " + loss + "\n the probability for winning a game =  " + (double) win / (win + loss));
+        System.out.println("your curren funds are: " + count );
+    }
+
+    public static int Roll ()
+    {
+        Random randomGenerator = new Random();
+        int dice1 = randomGenerator.nextInt(6) + 1;
+        int dice2 = randomGenerator.nextInt(6) + 1;
+        //System.out.println("\n dice1 = " + dice1 + " dice2 = " + dice2);
+        return dice1 + dice2;
+    }
+}
