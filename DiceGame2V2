@@ -1,0 +1,81 @@
+import java.util.Random;
+import java.util.Scanner; 
+
+public class DiceGame2
+{
+
+    public static void main (String args[]) throws java.lang.Exception
+    {
+        Scanner input = new Scanner(System.in);
+        Random r = new Random();
+        int win = 0;
+        int loss = 0;
+        int count =0;
+        int c =0;
+        int l=1;
+        int w =1;
+
+        int n=1;
+        int nn = 0;
+        int nnn=0;
+        int g=0;
+
+        //c = input.nextInt();
+        //count= count-1;
+        //count=count +1;
+        //System.out.println("your curren funds are: " + count );
+        //c= count*2;
+
+        // for(int ll = 0; ll < 10; ll++)
+        // {
+            
+        n = 1 + r.nextInt(6);
+        boolean flag = true;
+        System.out.println ("N = " + n);
+        while (flag == true && nnn < 5)
+        {
+            System.out.println("Roll "+ nnn +" will now commencre");
+            int dice1 = r.nextInt(6) + 1;
+            int dice2 = r.nextInt(6) + 1;
+            int dice3 = r.nextInt(6) + 1;
+            System.out.println (dice1 + "  " + dice2 + "  " + dice3);
+            nnn++;
+            w = 0;
+            if(dice1  == n)
+            {
+                w++;
+            }
+            else if (dice2 == n)
+            {
+                w++;
+            }
+            else if (dice3 == n)
+            {
+                w++;
+
+            }
+
+            if(w >=2)
+            {
+                System.out.println( n +"came up 2 or more times ");
+                System.out.println(" You win " );
+                flag = false;
+            }
+        }
+        if (flag == true)
+        {
+            System.out.println(" You lose " );
+
+        }
+    }
+
+    // }
+    // g++;
+    // l=0;
+    // n=1;
+    // }
+    // System.out.println( "Total agmes played = " + g);
+    // System.out.println("\n number of wins = " + win + " \n number of losses = " + loss + "\n the probability for winning a game =  " + (double) win / (win + loss));
+    // }
+
+}
