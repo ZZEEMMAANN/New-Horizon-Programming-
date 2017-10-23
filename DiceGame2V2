@@ -26,56 +26,63 @@ public class DiceGame2
         //System.out.println("your curren funds are: " + count );
         //c= count*2;
 
-        // for(int ll = 0; ll < 10; ll++)
-        // {
-            
-        n = 1 + r.nextInt(6);
-        boolean flag = true;
-        System.out.println ("N = " + n);
-        while (flag == true && nnn < 5)
+        for(int ll = 0; ll < 1000; ll++)
         {
-            System.out.println("Roll "+ nnn +" will now commencre");
-            int dice1 = r.nextInt(6) + 1;
-            int dice2 = r.nextInt(6) + 1;
-            int dice3 = r.nextInt(6) + 1;
-            System.out.println (dice1 + "  " + dice2 + "  " + dice3);
-            nnn++;
-            w = 0;
-            if(dice1  == n)
+
+            n = 1 + r.nextInt(6);
+            boolean flag = true;
+            System.out.println (" N = " + n);
+            while (flag == true && nnn < 5)
             {
-                w++;
+                System.out.println("Roll "+ nnn +" will now commence");
+                int dice1 = r.nextInt(6) + 1;
+                int dice2 = r.nextInt(6) + 1;
+                int dice3 = r.nextInt(6) + 1;
+                System.out.println (dice1 + "  " + dice2 + "  " + dice3);
+                nnn++;
+                w = 0;
+                if(dice1  == n)
+                {
+                    w++;
+                }
+                if (dice2 == n)
+                {
+                    w++;
+                }
+                if (dice3 == n)
+                {
+                    w++;
+
+                }
+
+                if(w >=2)
+                {
+                    System.out.println( n +" came up 2 or more times ");
+                    System.out.println(" You win " );
+                    win++;
+                    flag = false;
+                }
             }
-            else if (dice2 == n)
+            if (flag == true)
             {
-                w++;
-            }
-            else if (dice3 == n)
-            {
-                w++;
+                System.out.println(" You lose " );
+                loss++;
 
             }
-
-            if(w >=2)
-            {
-                System.out.println( n +"came up 2 or more times ");
-                System.out.println(" You win " );
-                flag = false;
-            }
+            nnn=0;
+            //flag = true;
+            g++;
         }
-        if (flag == true)
-        {
-            System.out.println(" You lose " );
 
-        }
+        System.out.println( " Total games played = " + g);
+        System.out.println(" \n number of wins = " + win + " \n number of losses = " + loss + " \n the probability for winning a game =  " + (double) win / (win + loss));
     }
 
-    // }
-    // g++;
-    // l=0;
-    // n=1;
-    // }
-    // System.out.println( "Total agmes played = " + g);
-    // System.out.println("\n number of wins = " + win + " \n number of losses = " + loss + "\n the probability for winning a game =  " + (double) win / (win + loss));
-    // }
-
 }
+// g++;
+// l=0;
+// n=1;
+// }
+
+//System.out.println("\n number of wins = " + win + " \n number of losses = " + loss + "\n the probability for winning a game =  " + (double) win / (win + loss));
+ 
