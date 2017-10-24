@@ -1,0 +1,56 @@
+import java.util.Random;
+public class Problem1
+{
+    public static void main (String args [])
+    {
+        Random random = new Random();
+        //int n = 2 + random.nextInt(999);
+        //System.out.println( "N = " + n);
+        int p = 1;
+        int win = 0;
+        int loss = 0;
+        int G=0;
+        boolean flag = false;
+        for(int ll = 0; ll < 1000 ; ll++)
+        {
+            int n = 2 + random.nextInt(999);
+            System.out.println( "N = " + n);
+
+            while ( flag == false)
+            {
+
+                //int n = 2 + random.nextInt(999);
+                //System.out.println( "N = " + n);
+                int a = 2 + random.nextInt(8);
+                System.out.println ("A randomly selects " + a);
+                p = p * a;
+                System.out.println ("P = " + p);
+                if ( p > n)
+                {
+                    System.out.println ("A Wins!");
+                    flag = true;
+                    win++;
+                }
+                else
+                {
+                    int b = 2 + random.nextInt(8);
+                    System.out.println ("B randomly selects " + b);
+                    p = p * b;
+                    System.out.println ("P = " + p);
+                    if ( p > n)
+                    {
+                        System.out.println ("B Wins!");
+                        flag = true;
+                        loss++;
+                    }
+                }
+            }
+            flag = false ;
+            G++;
+            p = 1;
+
+        }
+        System.out.println(G + " games have been played ");
+        System.out.println(" \n number of PlayerA wins = " + win + " \n number of PlayerB wins = " + loss) ;//+ " \n the probability for winning a game =  " + (double) win / (win + loss));
+    }
+}
