@@ -1,0 +1,106 @@
+import java.util.Random;
+import java.util.Scanner; 
+
+public class Problem2
+{
+
+    public static void main (String args[]) throws java.lang.Exception
+    {
+        Scanner input = new Scanner(System.in);
+        Random r = new Random();
+        int win = 0;
+        int loss = 0;
+        int count =0;
+        int c =0;
+        int l=1;
+        int w =1;
+
+        int n=1;
+        int nn = 0;
+        int nnn=1;
+        int g=0;
+        int m = 0;
+
+        //c = input.nextInt();
+        //count= count-1;
+        //count=count +1;
+        //System.out.println("your curren funds are: " + count );
+        //c= count*2;
+        System.out.println ("Enter money amount");
+        m = input.nextInt();
+
+        while (m > 0||m > m*2)
+        {
+
+            n = 1 + r.nextInt(6);
+            //boolean flag = true;
+            System.out.println (" N = " + n);
+            for(int ll = 0; ll < 1 ; ll++)
+            {
+                System.out.println(" game  "+ nnn +" will now commence");
+                int dice1 = r.nextInt(6) + 1;
+                int dice2 = r.nextInt(6) + 1;
+                int dice3 = r.nextInt(6) + 1;
+                System.out.println (dice1 + "  " + dice2 + "  " + dice3);
+                nnn++;
+                w = 0;
+                if(dice1  == n)
+                {
+                    w++;
+                }
+                if (dice2 == n)
+                {
+                    w++;
+                }
+                if (dice3 == n)
+                {
+                    w++;
+
+                }
+
+                if(w ==2)
+                {
+                    m=m+2;
+                    System.out.println("You gained 2 dollars");
+
+                }
+                if(w==3) 
+                {
+                    m=m+3;
+                    System.out.println("You gained 3 dollars");
+
+                }
+                if(w==1)
+                {
+                    m++;
+                    System.out.println("You gained 1 dollars");
+
+                }
+                if (w==0)
+                {
+                    m--;
+                    System.out.println("You Lost 1 dollars");
+                    
+                }
+                System.out.println("Your funds are "+ m);
+                break;
+
+            }
+            g++;
+            
+            //System.out.println(" \n number of wins = " + win + " \n number of losses = " + loss + " \n the probability for winning a game =  " + (double) win / (win + loss));
+        }
+        System.out.println( " Total games played = " + g);
+        if (m==0)
+        {
+         System.out.println("your broke");
+         
+        }
+        else 
+        {
+         System.out.println(" you won: "+ m + " dollars ");
+        }
+        
+
+    }
+}
