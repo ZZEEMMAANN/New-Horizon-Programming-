@@ -47,7 +47,16 @@ public class Word_Count
                 }
             }
         }
-            System.out.println (ans + " is the longest palindrome");
+        if (max > -10)
+        
+        {
+        System.out.println (ans + " is the longest palindrome");
+        }
+        else 
+        {
+        System.out.println("there are no palindromes");
+        }
+            
     }
    
 
