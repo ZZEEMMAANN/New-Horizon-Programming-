@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class Word_Count
+{
+    public static boolean is_palindrome (String input)
+    {
+        String y = "";
+
+        for (int i = input.length() -1 ; i >= 0; i--)
+        {
+            y += input.charAt(i);
+        }
+        if (y.equals (input))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    public static void main (String args[])
+    {
+        System.out.println("Word Length – Frequency Count");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Input Your Sentence");
+        String z = scanner.nextLine();
+
+        String delimiter = "[? ,!.;]+";                             //multiple occurrences of ? ,!.; are treated as delimiters between words
+
+        String [] words = z.split(delimiter);  // The split method returns a string array which contains the individual words of the sentence
+        String ans = "";
+        int max = -10;
+        
+        for (int i = 0; i <words.length; i++)
+        {
+            String t = words[i];
+            if (is_palindrome(t))
+            {
+                System.out.println (t + "  is a palindrome");
+                if (t.length() > max)
+                {
+                    max = t.length();
+                    ans = t;
+                }
+            }
+        }
+            System.out.println (ans + " is the longest palindrome");
+    }
+   
+
+}
