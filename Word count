@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class WordCount
+{
+        public static void main (String args[])
+    {
+        System.out.println("Word Length – Frequency Count");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Input Your Sentence");
+        String z = scanner.nextLine();
+
+        String delimiter = "[? ,!.;]+";                             //multiple occurrences of ? ,!.; are treated as delimiters between words
+
+        String [] words = z.split(delimiter);  // The split method returns a string array which contains the individual words of the sentence
+
+        for (int i = 0; i <words.length; i++)
+        {
+            String t = words[i];
+            System.out.println(t + "   " + t.length());
+        }
+
+    } 
+}
+
+ 
