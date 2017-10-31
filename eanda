@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class aande
+{
+    public static boolean is_AandE (String input)
+    {
+        int a=a;
+        int e=e;
+        String y = "";
+        
+        for (int i = input.length() -1 ; i >= 0; i--)
+        {
+            if (input.charAt(i)=e ||  input.charAt(i)=a)
+             {
+                return true;
+             }
+             else
+             {
+                return false;
+             }
+            y += input.charAt(i);
+        }
+
+    }
+    public static void main (String args[])
+    {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Input Your Sentence");
+        String z = scanner.nextLine();
+
+        String delimiter = "[? ,!.;]+";                             //multiple occurrences of ? ,!.; are treated as delimiters between words
+
+        String [] words = z.split(delimiter);  // The split method returns a string array which contains the individual words of the sentence
+        String ans = "";
+        int max = -10;
+
+        for (int i = 0; i <words.length; i++)
+        {
+            String t = words[i];
+            if (is_AandE(t))
+            {
+                System.out.println (t + "  is a palindrome");
+                if (t.length() > max)
+                {
+                    max = t.length();
+                    ans = t;
+                }
+            }
+        }
+        if (max > -10)
+
+        {
+            System.out.println (ans + " Has an a or an e");
+        }
+        else 
+        {
+            System.out.println("doesn't have an a or an e");
+        }
+
+    }
+
+}
