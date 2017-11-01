@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Aande
+{     
+    public static int CountAM(String z)
+    {
+        boolean t = false; 
+        int count=0;
+        int c = 0;
+        for (int i=0;i< z.length(); i++)
+        {
+            if(z.charAt(i) == 'a')
+            {
+             t = true ;
+             c++;
+            
+            }
+ 
+             if( z.charAt(i) =='e')
+            {
+             t = true ;
+             c++;
+            
+            }           
+            
+            else
+            {
+             t = false;  
+            }
+
+        }
+        return count;
+    }
+
+    public static void main (String args[])
+    {
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("Input Your Sentence");
+        String z = scanner.nextLine();
+
+        String delimiter = "[? ,!.;]+";                             //multiple occurrences of ? ,!.; are treated as delimiters between words
+
+        String [] words = z.split(delimiter);  // The split method returns a string array which contains the individual words of the sentence
+        for (int i = 0; i <words.length; i++)
+        {
+            int c = CountAM(words[i]);
+            if (c > 0)
+            {
+                System.out.println (words[i] + " has   " + c  );
+             }
+             else 
+             {
+              System.out.println("")'  
+              }
+        }
+    }
+
+}
