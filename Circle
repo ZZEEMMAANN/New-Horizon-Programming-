@@ -1,0 +1,48 @@
+import java.util.Scanner;
+/**
+ Tells cordnates of circle and where it is and the radius 
+ Zavion Taylor 
+ 1/8/17
+ */
+public class Circle 
+{
+    private int a,b,c;
+       
+    public Circle()  // Default Constructor
+    {
+        int x = 0;
+        int y = 0;
+        int r=0;
+    }
+    public Circle (int l, int w) // Parameter Constructor
+    {
+        int a;
+        int b;
+        int c;
+        
+    }
+    public void setX(int l)
+    {
+        x = a;
+    }
+    public void setY(int w)
+    {
+        y = b;
+    }
+    public void setR(int w)
+    {
+        r = c;
+    }
+    public int getX()
+    {
+        return x;
+    }
+    public int getY()
+    {
+        return y;
+    }
+    public int getR()
+    {
+        return ( x * y);
+    }
+}
