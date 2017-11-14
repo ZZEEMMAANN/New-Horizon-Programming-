@@ -3,7 +3,7 @@ import java.util.Scanner;
 Tells cordnates of circle and where it is and the radius 
 Zavion Taylor 
 1/8/17
- */
+ **/
 public class Circle 
 {
     private int a,b,c;
@@ -56,41 +56,38 @@ public class Circle
         return (3.14 * c * c);
     }
 }
-______
+_______________________________________
 import java.util.Scanner;
 public class CircleTest
 {
     public static void main (String args[])
     {
-        int max=0;
-        int i =0;
-        
+        double max=0;
+        int cell = 0;
         Scanner scan = new Scanner (System.in);
-        Circle C = new Circle(10, 12, 25); // Parameter Constructor
-        System.out.println ("Area = " + C.getArea());
-        C.setR(12);
-        System.out.println ("Area = " + C.getArea());
-        for (int i = 0; i <r.length; i++)
+        Circle C[] = new Circle[5];
+   
+        for (int p = 0; p <C.length; p++)
         {
-            System.out.println ("Input length for Rectangle#" + (i+1) );
-            int l = scan.nextInt();
-            System.out.println ("Input width for Rectangle#" + (i+1) );
-            int w = scan.nextInt();
-            C[i] = new Rectangle (l, w);   // Calling the constructor on each instance of Rectangle
-            System.out.println ("Area of  Rectangle#" + (i+1) + " = " + C[i].getArea());
-            if (C[i].getArea() > max)
+            System.out.println ("Input length for Circle # " + (p+1) );
+            int x = scan.nextInt();
+            System.out.println ("Input width for Circle # " + (p+1) );
+            int y = scan.nextInt();
+            System.out.println ("Input Radius for Circle # " + (p+1) );
+            int r = scan.nextInt();
+            C[p] = new Circle (x,y,r);   // Calling the constructor on each instance of Circle
+            System.out.println ("Area of  Circle # " + (p+1) + " = " + C[p].getArea());
+            if (C[p].getArea() > max)
             {
-                max = C[i].getArea();
-                cell = i;
+                max = C[p].getArea();
+                cell = p;
             }
             System.out.println();
         }
         System.out.println();
-        System.out.println ("Rectangle#" + (cell + 1) + " has the maximum area = " + max);
-        System.out.println ("Length of Rectangle#" + (cell + 1) + " = " + r[cell].getLength());
-        System.out.println ("Width  of Rectangle#" + (cell + 1) + " = " + r[cell].getWidth());
+        System.out.println ("Circle Area is # " +  max + "  " + C[cell].getA() + "   " +  C[cell].getB() + "  " +  C[cell].getR());
+
     }
 }
-    
-    
+
 
