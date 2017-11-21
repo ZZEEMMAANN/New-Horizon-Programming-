@@ -1,0 +1,107 @@
+import java.util.Scanner;
+/**
+Tells cordnates of circle and where it is and the radius 
+Zavion Taylor 
+1/8/17
+ **/
+public class Triangle
+{
+    private int a,b,c;
+
+    public Triangle()  // Default Constructor
+    {
+        a = 0;
+        b = 0;
+        c = 0;
+    }
+
+    public Triangle  (int l, int w, int r) // Parameter Constructor
+    {
+        a = l;
+        b = w;
+        c = r;
+    }
+
+    public void setA(int l)
+    {
+        a= l;
+    }
+
+    public void setB(int l)
+    {
+        b= l;
+    }
+
+    public void setR(int w)
+    {
+        c = w;
+    }
+
+    public int getA()
+    {
+        return a;
+    }
+
+    public int getB()
+    {
+        return b;
+    }
+
+    public int getR()
+    {
+        return c;
+    }
+    public int getArea()
+    {
+        return (a + b + c );
+    }
+}
+______________________________
+import java.util.Scanner;
+public class TriangleTest
+{
+    public static void main (String args[])
+    {
+        double max=0;
+        int cell = 0;
+        int i =0;
+        Scanner scan = new Scanner (System.in);
+        System.out.println("How many Triangles do you want");
+        i = scan.nextInt(); 
+        Triangle T[] = new Triangle[i];
+   
+        for (int p = 0; p <T.length; p++)
+        {
+            System.out.println ("Input Triangle Side A # " + (p+1) );
+            int x = scan.nextInt();
+            System.out.println ("Input Triangle side B # " + (p+1) );
+            int y = scan.nextInt();
+            System.out.println ("Input Triangle side C " + (p+1) );
+            int r = scan.nextInt();
+            T[p] = new Triangle (x,y,r);   // Calling the constructor on each instance of Circle
+            System.out.println ("Area of  Circle # " + (p+1) + " = " + T[p].getArea());
+            if (T[p].getArea() == 180)
+            {
+              System.out.println("is an triangle ");
+            }
+            else 
+            {
+              System.out.println("Its not a TRIANGLE  ");
+            }
+            
+           /*            
+            if (T[p].getArea() > max)
+            {
+                max = T[p].getArea();
+                cell = p;
+            }
+            */
+            System.out.println();
+        }
+        //System.out.println();
+        //System.out.println ("Triangle aiswa is # " +  max + "  " + T[cell].getA() + "   " +  T[cell].getB() + "  " +  T[cell].getR());
+
+    }
+}
+
+
