@@ -1,0 +1,104 @@
+import java.util.Scanner;
+public abstract class Account
+{
+    private String a, b; 
+    
+   public Account(String c, String d) 
+   {
+       a = c;
+       b = d;
+
+    }
+    public String getName()
+    {
+        return a;
+    }
+    public String getNumber()
+    {
+        return b;
+    }
+    public abstract double getBalance(double time);
+    public abstract String getNameAccountType();
+    
+    
+}
+______________
+import java.util.Scanner;
+public class Checking extends Account  
+{
+    public int Name, Number,Balance, Fees, Time;
+    private double balance, fees;
+
+    public void  setName (int a)
+    {
+        Name = a;
+    }
+
+    public void  setNumber (int b)
+    {
+        Number = b;
+    }
+
+    public void  setBalance (int x)
+    {
+        Balance = x;
+    }
+
+    public void  setFees (int y)
+    {
+        Fees = y;
+    }
+
+    public double getBalance(double time)
+    {
+
+        return balance-(Fees * Time);
+    }
+
+    public String getNameAccountType()
+    {
+
+        return "Checking Account";   
+    }
+
+    
+    
+    
+    
+}
+---------------------------
+import java.util.Scanner;
+public class StudentChecking extends Checking 
+{
+    private double Bonus ;
+    //super(a,b,x,y,z);
+    public StudentChecking(String a, String b, double x, double y)
+    {
+        Name = a;
+        Number= b;
+        Balance = x;
+        Fees =  y ;
+        Bonus = z;
+        
+        
+        
+
+    }
+
+   
+    public double getBalnce(double time )
+    {
+
+        return (super.getBalance(time)+Bonus) ;   
+    }
+    public String getNameAccountType()
+    {
+    
+    return " Student Checking Account";
+    }
+
+    
+    
+    
+}
+
