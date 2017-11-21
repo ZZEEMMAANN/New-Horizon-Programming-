@@ -1,0 +1,83 @@
+import java.util.Scanner;
+/**
+Tells cordnates of circle and where it is and the radius 
+Zavion Taylor 
+1/8/17
+ **/
+public class Balance2
+{
+    private int a,b;
+
+    public Balance2()  // Default Constructor
+    {
+        a = 0;
+        b = 0;
+    }
+
+    public Balance2  (int l, int w) // Parameter Constructor
+    {
+        a = l;
+        b = w;
+    }
+    public void dep(int y)
+    {
+        b = b + y;
+    }
+    public void wD(int w)
+    {
+        if(w > b)
+        {
+            System.out.println("Insuffient funds!!");
+            b = 0;
+        }
+        else
+        {
+            System.out.println(" withdraw successful!!");
+            b = b - w;
+        }
+
+    }
+    public void withdraw (int a)
+    {
+    
+    }
+   
+    public int getA()
+    {
+        return a;
+    }
+
+    public int getBalance()
+    {
+        return b;
+    }
+
+}
+______________________________
+import java.util.Scanner;
+public class Balancetest
+{
+    public static void main (String args[])
+    {
+        Scanner scan = new Scanner (System.in);
+        System.out.println ("Input account number " );  //(p+1) );
+        int n = scan.nextInt();
+        System.out.println ("Input starting value  " );//+ (p+1) );
+        int x = scan.nextInt();  
+        Balance2 df = new Balance2(n, x);
+        System.out.println ("Input Deposite amount " );//+ (p+1) );
+        int y = scan.nextInt();
+        df.dep(y);
+        System.out.println ("The balance of Account " + n  + " = "+ df.getBalance());
+        System.out.println ("Input Withdraw Amount  " );//(p+1) );
+        int r = scan.nextInt();
+        df.wD(r);
+        System.out.println ("The balance of Account " + n  + " = " + df.getBalance());
+
+        //B[p] = new Balance (x,y,z);   // Calling the constructor on each instance of Circle
+        //System.out.println ("The balance of Account " + (p+1) + " = " + B[p].getBalance());
+        System.out.println();
+    }
+}
+
+
