@@ -1,0 +1,133 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+ 
+public class ShapeCircleCylinderTest
+{
+    public static void main (String args[])
+    {
+        DecimalFormat df = new DecimalFormat ("0.000");
+        Circle c = new Circle (5, 5, 2);
+        Cylinder cr = new Cylinder (2, 2, 1, 5);
+ 
+        Shape s [] = new Shape[2];
+        s[0] = c;
+        s[1] = cr;
+ 
+        for (int i = 0; i < s.length; i++)
+        {
+            System.out.println (s[i].getName()+ " : " );
+            System.out.println ("Center = (" + s[i].getX() + " , " + s[i].getY() + ")");
+ 
+            if (s[i].getName().equals("Circle"))
+            {
+                ((Circle) s[i]).printValues();
+            }
+            else if (s[i].getName().equals("Cylinder"))
+            {
+ 
+                ((Cylinder) s[i]).printValues();
+ 
+            }
+            System.out.println ("Area = " + s[i].getArea());
+            System.out.println ("Volume = " + s[i].getVolume());
+            System.out.println();
+        }
+    }
+}
+___________
+public class Cylinder extends Circle
+{
+    private int h;
+ 
+    public Cylinder (int x, int y, int c, int d)
+    {
+        super (x, y, c);
+        h = d;
+    }
+ 
+    public double getArea()
+    {
+        return ((2 *super.getArea()) + (getCircumference() * h));
+    }
+ 
+    public double getVolume()
+    {
+        return (super.getArea() * h);
+    }
+ 
+    public void printValues()
+    {
+        super.printValues();
+        System.out.println ("Height = " + h);       
+    }
+ 
+    public String getName()
+    {
+        return "Cylinder";
+    }
+}
+___________________________________
+public class Circle extends Shape
+{
+    private int r;
+ 
+    public Circle (int x, int y, int c)
+    {
+        super (x, y);
+        r = c;
+    }
+ 
+    public int getRadius()
+    {
+        return r;
+    }
+ 
+    public double getArea()
+    {
+        return (Math.PI * r * r);
+    }
+ 
+    public double getCircumference()
+    {
+        return ( 2 * Math.PI * r);
+    }
+    public double getVolume()
+    {
+        return 0;
+    }
+    public void printValues()
+    {
+        System.out.println ("Radius = " + r);
+    }
+    public String getName()
+    {
+        return "Circle";
+    }
+}
+________________________________
+public abstract class Shape
+{
+    private int x, y;
+ 
+    public Shape (int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+ 
+    public int getX()
+    {
+        return x;
+    }
+ 
+    public int getY()
+    {
+        return y;
+    }
+ 
+    public abstract double  getArea();
+ 
+    public abstract double  getVolume();
+ 
+    public abstract String  getName();
+}
