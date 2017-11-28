@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+public class ArrayP
+{
+    public static void main(String args [])
+    {
+
+        ArrayList <String > x = new ArrayList <String> ();
+        x.add ("Kansas");       //adds to the end of the list
+        x.add ("Oregon");   //adds to the end of the list
+        x.add ("California");   //adds to the end of the list
+        x.add ("Dallas");   //adds to the end of the list
+        x.add ("Michigan");   //adds to the end of the list
+        x.add ("Kansas");   //adds to the end of the list
+        x.add ("Kansas");   //adds to the end of the list
+
+        System.out.println ("Printing the Array List"); 
+        System.out.println(x);
+
+        System.out.println ("\n");
+        int cell = x.indexOf("Dallas");
+
+        System.out.println ("Adding Austin at Cell#4 ");  // Current Value in Cell#1 and beyond are moved to the right to make way for Wisconsin
+        x.add (cell+ 1, "Austin");
+
+        System.out.println ("Printing the Array List"); 
+        System.out.println(x);
+
+        System.out.println ("\n");
+
+        while (x.contains("Kansas"))
+        {
+            x.remove ("Kansas");
+        }
+
+        System.out.println ("Printing the Array List");
+        System.out.println(x);
+
+        ArrayList <String > p = new ArrayList <String> ();
+        p.add ("Topeka");
+        p.add ("Richmond");
+        p.add ("Dallas");
+
+        System.out.println(p);
+
+        for (int i = 0; i <x.size(); i++)
+        {
+            String v = x.get(i); 
+            if (!p.contains(v))
+            {
+                System.out.println(v);
+            }
+        }
+
+    }
+
+}
