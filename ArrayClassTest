@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+ 
+public class ArrayListTest
+{
+    public static void main(String args [])
+    {
+ 
+        ArrayList <String > x = new ArrayList <String> ();
+ 
+        x.add ("Kansas");       //adds to the end of the list
+        x.add ("Oregon");   //adds to the end of the list
+        x.add ("California");   //adds to the end of the list
+ 
+        System.out.println ("Printing the Array List"); 
+        System.out.println(x);
+ 
+        
+        System.out.println ("\n");
+ 
+        System.out.println ("Adding Wisconsin at Cell#1 ");  // Current Value in Cell#1 and beyond are moved to the right to make way for Wisconsin
+        x.add (1, "Wisconsin");
+ 
+        System.out.println ("Printing the Array List"); 
+        System.out.println(x);
+ 
+        System.out.println ("\n");
+ 
+        System.out.println ("Checking if Ohio is on the list");
+ 
+        if (!x.contains("Ohio"))
+        {
+            System.out.println ("Ohio is not on the list");
+        }
+        else
+        {
+            System.out.println ("Ohio is in the list");
+        }
+        System.out.println ("\n");
+ 
+        System.out.println ("Printing the value in Cell#2 of the ArrayList");
+        System.out.println ("Cell#2 = " + x.get(2));
+        System.out.println ("\n");
+        System.out.println ("Replacing the value in Cell#0 with Vermont");
+        x.set(0, "Vermont");
+        System.out.println ("\n");
+        System.out.println  ("Printing the Array List");  
+        System.out.println(x);
+        System.out.println ("\n");
+        System.out.println ("Removing the value in Cell#3 from the Array List");  
+        x.remove(3);
+        System.out.println ("\n");
+        System.out.println ("Printing the Array List");  
+        System.out.println(x);
+ 
+        System.out.println ("Cell# of Oregon = " + x.indexOf("Oregon"));
+ 
+        System.out.println ("Size of the Array List = " +  x.size() + "\n");
+    }
+}
