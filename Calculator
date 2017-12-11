@@ -1,0 +1,89 @@
+import java.util.Scanner;
+public class Calculator 
+{
+	
+	
+
+	int math = 0;
+	static int num1 = 0;
+	static int num2 = 0;
+	static int sum = 0;
+	static int Fsum = 0;	
+	
+	
+	
+	public static void main( String args[] )
+	{
+	
+	Scanner input = new Scanner( System.in );  // create scanner {
+
+		
+		
+		System.out.println(" Calculator Start ");
+		
+		
+		 
+		System.out.println(" Enter the First number ");
+		 num1 = input.nextInt();
+		
+		
+		
+		System.out.println(" Enter number corresponding to the math");
+		 int math = input.nextInt();
+		
+		System.out.println(" Enter the Second  number ");
+		 num2 = input.nextInt();
+		
+		System.out.println("Enter the Second  number ");
+		sum = input.nextInt();
+		
+		if(math == 1)
+		{
+			Add();
+			System.out.println(Fsum);
+		}
+		else if (math == 2)
+		{
+			Minus();
+			Add();
+			System.out.println(Fsum);
+			
+		}
+		
+		if(sum == Fsum)
+		{
+			System.out.println(" Correct ");
+			
+		}
+		else  
+		{
+			
+			System.out.println(" Incorrect ");
+			
+		}
+		
+		
+		
+		
+	}
+	
+
+public static int Add()
+{
+	
+Fsum = num1 + num2;
+	
+	
+return Fsum;
+}
+
+
+public static int Minus()
+{
+	
+Fsum = num1 - num2;
+	
+	
+return Fsum;
+}
+}
