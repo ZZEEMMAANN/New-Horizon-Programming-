@@ -34,7 +34,7 @@ public class Calculator
 		System.out.println(" Enter the Second  number ");
 		 num2 = input.nextInt();
 		
-		System.out.println("Enter the Second  number ");
+		System.out.println(" What you think the answer is  ");
 		sum = input.nextInt();
 		
 		if(math == 1)
@@ -45,7 +45,6 @@ public class Calculator
 		else if (math == 2)
 		{
 			Minus();
-			Add();
 			System.out.println(Fsum);
 			
 		}
