@@ -1,0 +1,53 @@
+
+/**
+ * Write a description of class BinarySort2 here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class BinarySort2
+{
+    public static int bsearch(int a[], int M )
+    {
+
+        int cell=-1;
+        int l=0,r=a.length-1;
+        boolean flag = true;
+        while(flag && l <= r)
+        {
+            int m =(l+r)/2;
+            if (a[m]==M)
+            {
+                cell=m;
+                flag = false;
+            }
+            else if(a[m]>M)
+            {
+                r=m-1;
+            }
+            else
+            {
+                l=m+1;
+            }
+
+        }
+        
+        return cell;
+    }
+
+    public static void main (String args[])
+    {
+        int m=8900;
+        int a[]={10,15,19,25,600,800};
+        int cell = bsearch( a , m );
+        if ( cell == -1)
+        {
+            System.out.println( m + " not found ");
+        }
+        else 
+        {
+            System.out.println( m + " Was found in Cell # " +cell);
+        }
+    }
+    
+}
