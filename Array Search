@@ -1,0 +1,45 @@
+
+public class ArraySearch
+{
+    public static boolean ArraySearch(int a[], int M )
+    {
+        int l=0,r=a.length-1;
+        boolean flag = true;
+        int Fsum = 9;
+        int sum=0;
+        while(flag && l < r)
+        {
+            sum = a[l] + a[r];
+            if (sum == Fsum)
+            {
+                System.out.println( a[l] + " + "+ a[r] + " = " + Fsum );
+                flag = false;
+            }
+            else if(sum > Fsum)
+            {
+                r--;
+            }
+            else
+            {
+                l++;
+            }
+
+        }
+
+        return flag;
+    }
+
+    public static void main (String args[])
+    {
+        
+        
+        int a[]={2,6,10,15,100};
+        boolean flag = ArraySearch( a , 60);
+
+        if (flag) 
+        {
+            System.out.println( " Nothing equals "   );
+        }
+    }
+
+}
