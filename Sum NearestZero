@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class SumNearestZero
+{
+    public static void print (int a[])
+    {
+        for (int i : a)
+        {
+            System.out.print(i + " ");
+        }
+        System.out.println();    
+    }
+
+    public static void main (String args[])
+    {
+        int a[] = { -45 , -30 , -20 , 5 , 15}; 
+        int d = 1000000;
+        int r = a.length-1;
+        int l = 0;
+        int x = 0, y = 0;
+
+        while (l < r)
+        {
+            int sum = a[l] + a[r];
+            int value = Math.abs(sum);
+            if ( value < d)
+            {
+                d = value;
+                x = a[l];
+                y = a[r];
+            }
+            if (sum < 0)
+            {
+                l++;
+
+            }
+            else
+            {
+                r--;
+
+            }
+
+        }
+        System.out.println(x + "   " + y);
+    }
+}
+
