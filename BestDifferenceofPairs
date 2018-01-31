@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class BestDifferenceofPairs
+{
+    public static void print (int a[])
+    {
+        for (int i : a)
+        {
+            System.out.print(i + " ");
+        }
+        System.out.println();    
+    }
+
+    public static void main (String args[])
+    {
+        int x, y = 0; 
+        int a[] = {1, 7, 5, 8, 3};
+        int diff = a[y] - a[x]; 
+        if (a[x] < a[y])
+        {
+            diff = a[x] - a[y];
+            b[c] = diff;
+        }
+        
+        int value = Math.abs(diff);
+
+        if (b[0] < b[1])
+        {
+
+        }
+    }
+}        
+ 
