@@ -1,0 +1,44 @@
+
+public class ZeroArrayProblem
+{
+    public static void print(int a[])
+    {
+        for(int i :a){
+            System.out.print(i+ "  ");
+        }
+        System.out.println();
+    }
+
+    public static void ArraySearch(int a[])
+    {
+       
+        int l=0,r=a.length-1;
+        while (l < r)
+        { 
+            if(a[l]==0 & a[r]>0) 
+            {
+                int temp = a[l];
+                a[l] = a[r];
+                a[r] = temp;
+            }
+            if(a[l]>0) 
+            {
+                l++;
+            }
+            if(a[r]==0) 
+            {
+                r--;
+            }
+
+        }
+
+    }
+    //public static void main(String []args)
+    public static void main (String args[])
+    {
+        int b[]={1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0};
+        ArraySearch(b);       
+        print(b);
+    }
+}
+ 
